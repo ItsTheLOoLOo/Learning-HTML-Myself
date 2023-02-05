@@ -94,6 +94,7 @@ nav ul{
     background-color:hsl(0, 100%, 95%);
     margin:10px;
 }
+/*  **Without a button for changing paragraghs** 
 nav ul .lnav {
     float:none;
 }
@@ -105,6 +106,31 @@ nav ul li .anav{
     
     display:block;
     text-align:center;
+    
+}
+ */
+nav ul{
+    list-style-type:none;
+    padding:0;
+   
+    overflow:hidden; 
+    
+    margin:10px;
+}
+nav ul .lnav {
+    float:none;
+}
+nav ul li .anav{
+    
+    padding:16px;
+    border:1px solid hsl(0, 100%, 70%);
+    background-color:hsl(0, 100%, 95%);
+    width:100%;
+    color:gray;
+    cursor:pointer;
+    display:inline-block;
+    text-align:center;
+    border-style: hidden;
     
 }
 
@@ -136,6 +162,25 @@ footer{
 /* End */
 /* Responsive layout */
 @media (max-width: 600px) {
+    ul.Un1 {
+        width:100%;
+        font-size:small;
+    }
+    h1 {
+        font-size:24px;
+    }
+    h2 {
+        font-size:18px;
+    }
+    p {
+        font-size:13px;
+    }
+    header {
+        font-size:28px;
+    }
+    footer {
+        font-size:medium;
+    }
     section {
       -webkit-flex-direction: column;
       flex-direction: column;
