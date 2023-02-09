@@ -61,6 +61,23 @@ a.link:hover {
     color:white;
     transition-duration:0.3s;
 }
+.newstyle {
+    background-color:gray;
+    color:white;
+    text-decoration:none;
+    padding:12px 16px;
+    display:block;
+    border-left:8px solid lightblue;
+}
+.newstyle:hover {
+    border-bottom:8px solid lightblue;
+    border-left:none;
+    transition-duration:0.5s;
+    color:lightblue;
+    background-color:gray;
+    padding:10px 14px;
+    
+}
 
 /* my flex design */
 * {
