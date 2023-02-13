@@ -4,12 +4,13 @@
 			<meta charset="UTF-8">
 			<meta name="author" content="TheLOoLOo">
 			<link href="2nd file.css" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
 			<title>What I Learned Today</title>
 			<link href="pencil.ico" type="image/x-html" rel="icon">
 			<script>
 				function urFunction() {
 					document.getElementById("js1").innerHTML = "What was Iran before the revolution?";
-					document.getElementById("js2").innerHTML = "In the decades before the Islamic revolution of 1979, Iran was ruled by the Shah, whose dictatorship repressed dissent and restricted political freedoms. But he also pushed the country to adopt Western-oriented secular modernization, allowing some degree of cultural freedom.&#128150;";
+					document.getElementById("js2").innerHTML = "In the decades before the Islamic revolution of 1979, Iran was ruled by the Shah, who was unable to repressed dissent and restricted political freedoms. But he also pushed the country to adopt Western-oriented secular modernization, allowing some degree of cultural freedom.&#128150;";
 				}
 				/* function myFunction () {
 					document.getElementById("js1").innerHTML = "In the decades before the Islamic revolution of 1979, Iran was ruled by the Shah, whose dictatorship repressed dissent and restricted political freedoms. But he also pushed the country to adopt Western-oriented secular modernization, allowing some degree of cultural freedom.&#128150;";
@@ -22,10 +23,21 @@
 					document.getElementById("js1").innerHTML = "What were the effects of the Iranian revolution?";
 					document.getElementById("js2").innerHTML = "Iranian Revolution, also called Islamic revolution, Persian Enqelāb-e Eslāmī, popular uprising in Iran in 1978–79 that resulted in the toppling of the monarchy on February 11, 1979, and led to the establishment of an Islamic republic.&#128148;";
 				}
+				function showNav() {
+					document.getElementById("navbar").style.display = "block";
+					document.getElementById("home").style.display = "none";
+					document.getElementById("W").style.width= "88%";
+				}
+				function hideIt() {
+					document.getElementById("navbar").style.display = "none";
+					document.getElementById("home").style.display = "block";
+					document.getElementById("W").style.width = "100%";
+				}
 			</script>
 	</head>
 	<body>
 		<ul class="Un1" id="home">
+			<button type="button" onclick="showNav()" class="mybutton">☰</button>
 			<li><a href="#notes" class="list">My Notes</a></li>
 			<li><a href="#tests" class="list">My Tests</a></li>
 			<li><a href="https://www.w3schools.com/html/html_colors.asp" class="list" target="_blank">HTML Colors</a></li>
@@ -35,63 +47,83 @@
 			<li><a href="Signup.html" class="list data" title="Let's make an account ;D" id="SL">SignUp</a></li>
 			<li><a href="" class="list">More Items will add soon !</a></li>
 		</ul>
-		<h1>TheLOoLOo's HTML Tests & Notes !</h1>
-		<!-- Write your notes here -->
-		<h2 id="notes">My Notes:</h2>
-		<p><a href="https://www.w3schools.com/html" target="_blank" class="link">Learning HTML Myself from w3schools.</a></p>
-		<p><a href="https://www.w3schools.com/html/html_head.asp" target="_blank" class="link">Learned till HTML <q>File Paths</q> will learn the others later.</a></p>
-		<p><a href="https://www.w3schools.com/html/html_responsive.asp" target="_blank" class="link">Learned till HTML <q>Layout</q> will learn the others later.</a></p>
-		<p><a href="#h" class="link">Wrote a script to change paragraphs. :DDDDDD</a></p>
-		<p><a href="https://www.w3schools.com/html/html_computercode_elements.asp" class="link" target="_blank">Learned till HTML <q>Computercodes</q> will learn the others later.</a></p>
-		<p><a href="#SL" class="link">Made a <q>Login / Sign Up</q> for my HTML file !</a></p>
-		<p><a href="https://www.w3schools.com/html/html_form_elements.asp" class="link">Learned till Form Element <q>DataList</p></a></p>
-		<p><a href="https://www.w3schools.com/css/default.asp" class="learned">I Learned HTML i guess :D, ill start learning CSS by tomorrow.</p></a></p>
-		<p><a href="https://www.w3schools.com/css/css_margin.asp" class="newstyle" target="_blank">Learned till CSS Border, Others later.</p></a></p>
-		<!-- End -->
-		<hr>
-		<!-- Do your tests here -->
-		<h2 id="tests">My Tests:</h2>
-		<!-- **Without a button for changing paragraghs**
-		 <div style="margin:20px;"><header>Iran before/after revolution</header>
-		<section>
-			<nav>
-				<ul>
-					<li class="lnav"><a href="#before/after" class="anav">test 1</a></li>
-					<li class="lnav"><a href="#pics" class="anav">test 2</a></li>
-					<li class="lnav"><a href="#money" class="anav">test 3</a></li>
-				</ul>	
-			</nav>
-		<article>
-			<h1>What was Iran before the revolution?</h1>
-			<p class="article"> In the decades before the Islamic revolution of 1979, Iran was ruled by the Shah, whose dictatorship repressed dissent and restricted political freedoms. But he also pushed the country to adopt Western-oriented secular modernization, allowing some degree of cultural freedom.&#128150;</p>
-			<h1>What were the effects of the Iranian revolution?</h1>
-			<p class="article">Iranian Revolution, also called Islamic revolution, Persian Enqelāb-e Eslāmī, popular uprising in Iran in 1978–79 that resulted in the toppling of the monarchy on February 11, 1979, and led to the establishment of an Islamic republic.&#128148;</p>
-		</article>	
-		</section>
-		<footer><mark style="background-color:white;">&nbsp; The end is soon I.R  <span style="font-size:32px;">&#127867;</span></mark><br>
-		<mark style="background-color:white;">&nbsp; rip 1979 - 2023 &nbsp;</mark>
-		</footer></div> -->
-		<div style="margin:20px;">
-			<header id="h">Iran before/after revolution</header>
+		<nav style="display:none;" id="navbar">
+			<ul class="navul">
+				<li><button type="button" onclick="hideIt()" class="hideIt">Close ✕</button></li>
+				<li><a href="Login.html" class="myNavLink">Login</a></li>
+				<li><a href="Signup.html" class="myNavLink">SignUp</a></li>
+				<li><a href="#notes" class="myNavLink">My Notes</a></li>
+				<li><a href="#tests" class="myNavLink">My Tests</a></li>
+				<li><a href="https://www.w3schools.com/html/html_colors.asp" class="myNavLink" target="_blank">HTML Colors</a></li>
+				<li><a href="https://www.w3schools.com/html/html_emojis.asp" class="myNavLink" target="_blank">HTML Emojies</a></li>
+				<li><a href="https://www.w3schools.com/html/html_symbols.asp" class="myNavLink" target="_blank">HTML Symbols</a></li>
+				<li><a href="" class="myNavLink">More Items will add soon !</a></li>
+			</ul>
+		</nav>
+		<section id="W">
+			<h1 id="h1">TheLOoLOo's HTML Tests & Notes !</h1>
+			<!-- Write your notes here -->
+			<h2 id="notes">My Notes:</h2>
+			<h3> HTML :</h3>
+			<p><a href="https://www.w3schools.com/html" target="_blank" class="link">Learning HTML Myself from w3schools.</a></p>
+			<p><a href="https://www.w3schools.com/html/html_head.asp" target="_blank" class="link">Learned till HTML <q>File Paths</q> will learn the others later.</a></p>
+			<p><a href="https://www.w3schools.com/html/html_responsive.asp" target="_blank" class="link">Learned till HTML <q>Layout</q> will learn the others later.</a></p>
+			<p><a href="#h" class="link">Wrote a script to change paragraphs. :DDDDDD</a></p>
+			<p><a href="https://www.w3schools.com/html/html_computercode_elements.asp" class="link" target="_blank">Learned till HTML <q>Computercodes</q> will learn the others later.</a></p>
+			<p><a href="#SL" class="link">Made a <q>Login / Sign Up</q> for my HTML file !</a></p>
+			<p><a href="https://www.w3schools.com/html/html_form_elements.asp" class="link">Learned till Form Element <q>DataList</p></a></p>
+			<p><a href="https://www.w3schools.com/css/default.asp" class="learned">I Learned HTML i guess :D, ill start learning CSS by tomorrow.</p></a></p>
+			<h3> CSS :</h3>
+			<p><a href="https://www.w3schools.com/css/css_margin.asp" class="newstyle" target="_blank">Learned till CSS Border, Others later.</p></a></p>
+			<p><a href="https://www.w3schools.com/css/css_text_transformation.asp" class="newstyle" target="_blank">Learned till CSS Text (text-decoration), Others later.</p></a></p>
+			<p><a href="https://www.w3schools.com/css/css_list.asp" class="newstyle" target="_blank">Learned till CSS List, Others later.</p></a></p>
+			<p><a href="https://www.w3schools.com/css/css_display_visibility.asp" class="newstyle" target="_blank">Learned till CSS Tables, Others later.</p></a></p>
+			<!-- End -->
+			<hr>
+			<!-- Do your tests here -->
+			<h2 id="tests">My Tests:</h2>
+			<!-- **Without a button for changing paragraghs**
+			 <div style="margin:20px;"><header>Iran before/after revolution</header>
 			<section>
 				<nav>
 					<ul>
-						<li class="lnav"><button type="button" onclick="urFunction()" class="anav">Iran before revolution</button></li>
-						<!-- <li class="lnav"><button type="button" onclick="myFunction()" class="anav">Test 2</button></li> 
-							<li class="lnav"><button type="button" onclick="hisFunction()" class="anav">Test 3</button></li> -->
-						<li class="lnav"><button type="button" onclick="herFunction()" class="anav">Iran after revolution</button></li>
+						<li class="lnav"><a href="#before/after" class="anav">test 1</a></li>
+						<li class="lnav"><a href="#pics" class="anav">test 2</a></li>
+						<li class="lnav"><a href="#money" class="anav">test 3</a></li>
 					</ul>	
 				</nav>
 			<article>
-				<h1 id="js1"></h1>
-				<p id="js2" class="article"></p>
-
+				<h1>What was Iran before the revolution?</h1>
+				<p class="article"> In the decades before the Islamic revolution of 1979, Iran was ruled by the Shah, whose dictatorship repressed dissent and restricted political freedoms. But he also pushed the country to adopt Western-oriented secular modernization, allowing some degree of cultural freedom.&#128150;</p>
+				<h1>What were the effects of the Iranian revolution?</h1>
+				<p class="article">Iranian Revolution, also called Islamic revolution, Persian Enqelāb-e Eslāmī, popular uprising in Iran in 1978–79 that resulted in the toppling of the monarchy on February 11, 1979, and led to the establishment of an Islamic republic.&#128148;</p>
 			</article>	
 			</section>
 			<footer><mark style="background-color:white;">&nbsp; The end is soon I.R  <span style="font-size:32px;">&#127867;</span></mark><br>
 			<mark style="background-color:white;">&nbsp; rip 1979 - 2023 &nbsp;</mark>
-			</footer>
-		</div>
+			</footer></div> -->
+			<div style="margin:20px;">
+				<header id="h">Iran before/after revolution</header>
+				<section>
+					<nav>
+						<ul>
+							<li class="lnav"><button type="button" onclick="urFunction()" class="anav">Iran before revolution</button></li>
+							<!-- <li class="lnav"><button type="button" onclick="myFunction()" class="anav">Test 2</button></li> 
+								<li class="lnav"><button type="button" onclick="hisFunction()" class="anav">Test 3</button></li> -->
+							<li class="lnav"><button type="button" onclick="herFunction()" class="anav">Iran after revolution</button></li>
+						</ul>	
+					</nav>
+				<article>
+					<h1 id="js1"></h1>
+					<p id="js2" class="article"></p>
+				</article>	
+				</section>
+				<footer><mark style="background-color:white;">&nbsp; The end is soon I.R  <span style="font-size:32px;">&#127867;</span></mark><br>
+				<mark style="background-color:white;">&nbsp; rip 1979 - 2023 &nbsp;</mark>
+				</footer>
+			</div>
+		</section>
 		<!-- End -->
+
 	</body>
 </html>

@@ -12,41 +12,148 @@ body {
     background-color:rgb(51, 48, 118)
 }
 ul.Un1{
-    background-color:rgb(0, 34, 52);
+    position:-webkit-sticky;
+    position:sticky;
+    top:0;
+    background-color:white;
     list-style-type:none;
     border-radius:8px;
     padding:0;
     margin:0;
-    overflow:hidden;
+    overflow-x:hidden;
     font-family:sans-serif;
     font-size:20px;
 }
 
 li .list{
     text-decoration:none;
-    color:rgb(200, 204, 201);
-    border:1px solid rgb(0, 34, 52);
-    border-radius:8px;
+    color:black;
+    border:1px solid white;
     padding:12px ;
-    display:inline-block;
     float:left;
+    
+
 }
 li .data {
     float:right;
 }
 li .list:hover {
-    background-color:rgb(0, 39, 70);
+    background-color:dodgerblue;
     color:white;
     transition-duration:0.3s;
     
 }
+p {
+    font-family:Arial;
+    font-size:16px;
+    color:white;
+}
+a.link {
+    background-color:rgb(0, 34, 52);
+    text-decoration:none;
+    text-align:left;
+    display:block;
+    border:1px solid rgb(0, 34, 52);
+    color:rgb(200, 204, 201);
+    padding: 12px 16px;
+}
+a.link:hover {
+    background-color:rgb(0, 39, 70);
+    color:white;
+    transition-duration:0.3s;
+}
+.newstyle {
+    background-color:gray;
+    color:white;
+    text-decoration:none;
+    padding:12px 16px;
+    display:block;
+    border-left:8px solid lightblue;
+}
+.newstyle:hover {
+    border-bottom:8px solid lightblue;
+    border-left:none;
+    transition-duration:0.1s;
+    color:lightblue;
+    background-color:gray;
+    padding:10px 14px;
+    text-shadow: 0px 3px black;
+}
+button.show {
+    background-color:transparent;
+    float:left;
+    color:black;
+    font-size:20px;
+    padding:12px;
+    border:1px solid transparent;
+    cursor:pointer;
+}
+button.show:hover {
+    background-color:dodgerblue;
+    color:white;
+    transition-duration:0.3s;
+}
+#myNavBar {
+    float:left;
+    width:12%;
+}
+#myNavBar > ul {
+    background-color:lightgray;
+    top:0;
+    min-height:100%;
+    display:block;
+    position:fixed;
+    padding:0;
+    width:11%;
+    border-radius:6px;
+}
+#myNavBar > ul > li {
+    list-style-type:none;
+    text-align:center;
+}
+.navlink {
+    background-color:transparent;
+    color:black;
+    display:block;
+    text-decoration:none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.navlink:hover {
+    background-color:dodgerblue;
+    color:white;
+    transition-duration:0.3s;
+}
+button.close {
+    background-color:transparent;
+    display:block;
+    color:black;
+    font-size:20px;
+    padding:12px;
+    border:1px solid transparent;
+    cursor:pointer;
+    width:100%;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+button.close:hover {
+    background-color:red;
+    color:white;
+    transition-duration:0.3s;
+}
+
 div {
     text-align:center;
     border:4px solid rgb(0, 34, 52);
     border-radius:8px;
     padding:20px;
     padding-bottom:40px;
-    margin-top:20px;
+    margin:auto;
+    margin-top:40px;
+    width:50%;
+    overflow:hidden;
 }
 div mark {
     background-color:white;
@@ -60,14 +167,21 @@ form.one {
    
     text-align:left;
 }
-div {
-    padding-top:20px;
-}
+
 .fname,.lname,.email,.gender,.lpassword{
     font-family:arial;
     font-size:20px;
     color:white;
     display:block;
+}
+.country {
+    font-family:arial;
+    font-size:20px;
+    color:white;
+}
+.scountry {
+    font-family:arial;
+    font-size:20px;
 }
 .mgender,.wgender {
     font-family:arial;
@@ -107,6 +221,7 @@ form > input.submit {
     border-radius:2px;
     text-align:center;
     cursor:pointer;
+    overflow:hidden;
 }
 form > input.submit:hover {
     background-color:green;
@@ -116,36 +231,76 @@ form > input.submit:hover {
 form.two {
     text-align:center;
 }
+@media (width="600px;"){
+
+}
 
 
 
         </style>
+        <script>
+            function showNav() {
+                document.getElementById("myNavBar").style.display = "block";
+                document.getElementById("ullist").style.display = "none";
+            }
+            function hideIt() {
+                document.getElementById("myNavBar").style.display = "none";
+                document.getElementById("ullist").style.display = "block";
+            }
+        </script> 
     </head>
     <body>
-        <ul class="Un1">
+        <ul class="Un1" id="ullist">
+            <button type="button" onclick="showNav()" class="show">☰</button>
             <li><a href="2nd file.html#home" class="list">&#127968;</a></li>
-			<li><a href="#notes" class="list">My Notes</a></li>
-			<li><a href="#tests" class="list">My Tests</a></li>
 			<li><a href="https://www.w3schools.com/html/html_colors.asp" class="list" target="_blank">HTML Colors</a></li>
 			<li><a href="https://www.w3schools.com/html/html_emojis.asp" class="list" target="_blank">HTML Emojies</a></li>
 			<li><a href="https://www.w3schools.com/html/html_symbols.asp" class="list" target="_blank">HTML Symbols</a></li>
-			<li><a href="Login.html" class="list data" title="welcome back">Login</a></li>
+			<li><a href="Login.html" class="list data">Login</a></li>
 			<li><a href="" class="list">More Items will add soon !</a></li>
 		</ul>
+        <nav style="display:none;" id="myNavBar">
+             <ul>
+                 <li><button type="button" onclick="hideIt()" class="close">Close ✕</button></li>
+                 <li><a href="2nd file.html#home" class="navlink">&#127968;</a></li>
+                 <li><a href="https://www.w3schools.com/html/html_colors.asp" class="navlink">HTML Colors</a></li>
+                 <li><a href="https://www.w3schools.com/html/html_emojis.asp" class="navlink">HTML Emojies</a></li>
+                 <li><a href="https://www.w3schools.com/html/html_symbols.asp" class="navlink">HTML Symbols</a></li>
+                 <li><a href="Login.html" class="navlink">Login</a></li>
+                 <li><a href="#" class="navlink">More Items will add soon !</a></li>
+             </ul>
+        </nav>
         <div>
             <h1>
-                <mark> Create your account !</mark>
+                <mark style="color:dodgerblue;"> Create your account !</mark>
             </h1>
             <form action="data.php" class="one">
                 <label for="fname" class="fname">First name :</label><br>
                 <input type="text" id="fname" name="fname" placeholder="Cyrus" class="ifname"><br>
                 <label for="lname" class="lname">Last name :</label><br>
                 <input type="text" id="lname" name="lname" placeholder="The Great" class="ilname"><br>
+                <label for="country" class="country">Choose your country :&nbsp;</label>
+                <select class="scountry">
+                    <option id="country" value="Germany">Germany</option>
+                    <option id="country" value="Italy">Italy</option>
+                    <option id="country" value="Spain">Spain</option>
+                    <option id="country" value="France">France</option>
+                    <option id="country" value="Turkey">Turkey</option>
+                    <option id="country" value="Canada">Canada</option>
+                    <option id="country" value="United Kingdom">United Kingdom</option>
+                    <option id="country" value="United States">United States</option>
+                </select><br>
+                <!-- <input list="browsers">
+                <datalist id="browsers">
+                    <option value="Germany">
+                    <option value="United States">
+                </datalist> -->
                 <p class="gender">You are a ....</p>
                 <label for="mgender" class="mgender">Man</label>
-                <input type="checkbox" id="mgender" class="imgender">&nbsp; | &nbsp;
+                <input type="radio" id="mgender" class="imgender" name="gender">&nbsp; | &nbsp;
                 <label for="wgender" class="wgender">Woman</label>
-                <input type="checkbox" id="Wgender" class="iwgender"><br><br><hr><br>
+                <input type="radio" id="Wgender" class="iwgender" name="gender"><br><br><hr><br>
+                
                 <label for="email" class="email">email address :</label><br>
                 <input id="email" type="text" name="text" placeholder="Gmail / Yahoo / Hotmail" class="iemail">
                 <p class="newaccount"><a href="https://www.gmail.com/" target="_blank" class="newacc">don't have an account? make one !</a></p>
@@ -160,4 +315,4 @@ form.two {
             
         </div>    
     </body> 
-</htnl>
+</html>
