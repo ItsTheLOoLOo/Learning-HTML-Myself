@@ -96,17 +96,18 @@ button.hideIt:hover {
 }
 
 ul.Un1{
-    position:-webkit-sticky;
-    position:sticky;
-    top:0;
     background-color:white;
     list-style-type:none;
     border-radius:8px;
     padding:0;
     margin:0;
-    overflow-x:hidden;
+    overflow:auto;
+    white-space: nowrap;
     font-family:sans-serif;
     font-size:20px;
+}
+ul.Un1 > li {
+    display:inline-block;
 }
 
 li .list{
@@ -115,12 +116,9 @@ li .list{
     border:1px solid white;
     padding:12px ;
     float:left;
-    
+}
+ 
 
-}
-li .data {
-    float:right;
-}
 li .list:hover {
     background-color:dodgerblue;
     color:white;
@@ -278,10 +276,10 @@ footer{
 /* End */
 /* Responsive layout */
 @media screen and (max-width: 600px) {
-    ul.Un1 {
+    /* ul.Un1 {
         width:100%;
         font-size:small;
-    }
+    } */
     h1 {
         font-size:24px;
     }
