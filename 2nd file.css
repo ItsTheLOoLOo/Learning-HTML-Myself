@@ -26,7 +26,8 @@ h3 {
     text-decoration:underline;
 }
 body {
-    background-color:rgb(51, 48, 118);
+   /* background-color:rgb(51, 48, 118); default : faghat hamin too in style */
+   background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
 }
 button.mybutton {
     font-size:24px;
@@ -105,6 +106,7 @@ ul.Un1{
     white-space: nowrap;
     font-family:sans-serif;
     font-size:20px;
+    text-align:center;
 }
 ul.Un1 > li {
     display:inline-block;
@@ -159,7 +161,7 @@ a.link:hover {
     color:lightblue;
     background-color:gray;
     padding:10px 14px;
-    text-shadow: 0px 3px black;
+    
 }
 
 /* my flex design */
@@ -318,3 +320,63 @@ article {
     text-shadow:0px 4px purple;
     text-decoration: underline;
 }
+
+
+
+@keyframes lights {
+    0% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+    30% { 
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    40% { 
+      color: hsl(230, 100%, 95%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    70% {
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    100% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+  }
+
+  
+  #creative {
+    
+    text-align:center;
+    margin-top:20px ;
+    font-size: 32px;
+    font-weight: 300;
+    animation: lights 5s 750ms linear infinite;
+  }
