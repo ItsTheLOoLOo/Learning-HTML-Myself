@@ -110,7 +110,7 @@ div.body {
 div.body {
     width:80%;
     position:absolute;
-    top:20%;
+    top:160px;
     text-align:center;
     left:10%;
 }
@@ -127,6 +127,7 @@ div.body {
     color:white;
     opacity:0.6;
 }
+/*
 .dheader:hover {
     background-color:white;
     color:black;
@@ -134,21 +135,22 @@ div.body {
     text-decoration:underline gray;
     transition-duration:0.4s;
 }
+*/
 a.dlink {
     border-bottom:4px solid green;
     text-decoration:none;
     color:white;
     font-family:serif;
     font-size:36px;
+    box-shadow:inset 0 0 0 0 transparent;
+    padding:5px;
+    transition:color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .dlink:hover {
-    background-color:#237893;
-    padding:15px;
+    box-shadow:inset 200px 0 0 0 #237893;
     color:white;
-    border-bottom:4px solid #237893;
-    text-decoration:underline green;
-    border-radius:100px;
-    transition-duration:0.4s;
+    border-bottom:4px solid green;
+    
 }
 #creative {
     border:1px solid transparent;
@@ -211,3 +213,77 @@ a.dlink {
     }
     
   }
+
+
+.dsection {
+    width:100%;
+    margin:auto;
+    text-align:center;
+
+}
+.dsection1 {
+    width:25%;
+    border:1px solid transparent;
+    border-radius:12px;
+    display:inline-block;
+    margin:10px;
+    margin-top:25px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+.sectionimg {
+    width:100%;
+    height:250px;
+    border-top-left-radius:12px;
+    border-top-right-radius:12px;
+    opacity:0.9;
+}
+.sectionimg:hover {
+    filter: contrast(120%);
+    transition-duration:0.3s;
+    opacity:1;
+}
+.dsection1 > div {
+    padding-bottom:20px;
+}
+h5 {
+    right:100%;
+    font-family:Pompiere;
+    font-size:26px;
+    text-decoration:underline dodgerblue 4px;
+}
+.dsection1 > div > p {
+    font-size:18px;
+    font-family:Hubballi;
+}
+.visitb {
+    text-decoration:none;
+    color:green;
+    border:2px solid green;
+    background-color:white;
+    padding:12px;
+    border-radius:3px;
+    font-size:16px;
+    font-family:Amaranth;
+}
+.visitb:hover {
+    background-color:green;
+    color:white;
+    transition-duration:0.3s;
+
+}
+.visitr {
+    text-decoration:none;
+    color:red;
+    border:2px solid red;
+    background-color:white;
+    padding:12px;
+    border-radius:3px;
+    font-size:16px;
+    font-family:Amaranth;
+}
+.visitr:hover {
+    background-color:red;
+    color:white;
+    transition-duration:0.3s;
+
+}
