@@ -8,29 +8,39 @@
         <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
         <link href="Paradise.css" rel="stylesheet">
         <link href="tree.ico" rel="icon" type="image/x-html">
-        <script src="Paradise.js"></script>
+        <!-- <script src="Paradise.js"></script> -->
         <title> Pleasure Island </title>
     </head>
     <body>
         <ul class="nav">
-           <li class="rast"><a href="" class="anav">Login</a></li>
-           <li class="rast"><a href="" class="anav">Signup</a></li>
-           <li class="chap"><a href="2nd file.html" class="home" title="Home">🏠</a></li>
-           <li class="chap"><a href="" class="anav">Islands for Rent</a></li>
-           <li class="chap"><a href="" class="anav">Islands for Sale!</a></li>
-           <li><a href="" id="creative">Welcome to Pleasure Islands🏖️</a></li>
+           <li><a href="" class="anav">Login</a></li>
+           <li><span class="snav">Welcome to Pleasure Island</span></li>
+           <li><a href="" class="anav">Signup</a></li>
        </ul>
         
         <div class="container">
-            <img src="sea and island.jpg" alt="An Island" class="img">
+            <div class="mySlides fade">
+                <img src="sea and island.jpg" class="img">
+                <img src="islands/islandres.jpg" class="imgres">
+            </div>
+            <div class="mySlides fade">
+                <img src="sea.jpg" class="img">
+                <img src="islands/islandres2.jpg" class="imgres">
+            </div>
+            <div class="mySlides fade">
+                <img src="sea1.jpg" class="img">
+                <img src="islands/islandres3.jpg" class="imgres">
+            </div>
             <div class="body">
                     <h3 class="hheader"><mark class="dheader">Looking for an Island?</mark></h3>
                     <p class="pheader"><mark class="dheader">Well at Burgh Island this dream can become a reality with one of the most unique exclusive use venues in the UK.
                         We have well over 17 years' experience in hosting memorable special occasions.
                         Enquire today to discuss private island rental at Burgh Island.</mark>
                     </p><br><br><br>
-                    <a href="#buy" class="dlink">Buy Island<span style="display:none;" class="dollar">💵</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="#rent" class="dlink">Rent Island<span style="display:none;" class="dollar">💵</span></a>
+                    <div class="res">
+                    <a href="#buy" class="dlink">Buy Island</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#rent" class="dlink">Rent Island</a>
+                    </div>
                    
             <!-- 
                 <div class="pose">
@@ -103,6 +113,22 @@
             </div>
         </div>
     </body>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          slides[slideIndex-1].style.display = "block";  
+          setTimeout(showSlides, 10000); 
+        }
+        </script>
 </html>
 
 
